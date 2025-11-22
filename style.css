@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding-top: 20px;
+}
+
+#bingo-board {
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
+    grid-gap: 5px;
+    margin: 20px auto;
+    width: 625px; /* 5 * 120px + 4 * 5px gap = 620 + 5 = 625 */
+    border: 3px solid #333;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bingo-cell {
+    width: 120px;
+    height: 120px;
+    background-color: #f1c40f; /* Yellow */
+    color: #333;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #333;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+.bingo-cell:hover {
+    background-color: #f39c12;
+}
+
+.bingo-cell.marked {
+    background-color: #e74c3c; /* Red when marked */
+    color: white;
+    font-weight: bold;
+    pointer-events: none; /* Stop further interaction once marked */
+}
+
+#game-controls {
+    margin-bottom: 20px;
+}
+
+#current-call {
+    font-size: 24px;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+#message {
+    font-size: 20px;
+    font-weight: bold;
+    min-height: 25px; /* Maintain vertical space */
+    color: #c0392b;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
